@@ -1,10 +1,17 @@
 import React from 'react';
-import { Avatar, Stack } from '@mui/material';
+import { Box, Stack } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 
 const Header = () => {
   return (
-    <header>
+    <Box
+      component="header"
+      sx={{
+        bgcolor: "primary.main",
+        color: "white"
+      }}
+    >
       <Stack
         direction="row"
         useFlexGap
@@ -12,8 +19,6 @@ const Header = () => {
           justifyContent: "space-between",
           alignItems: "center",
           padding: "1rem",
-          bgcolor: "#455b79",
-          color: "white"
         }}
       >
         <Stack
@@ -25,13 +30,13 @@ const Header = () => {
           }}
         >
           <MenuIcon />
-          <h1>REFACTUM</h1>
+          <h1>REFACTUM Fertigungsassiastent</h1>
         </Stack>
         <div>
-          <Avatar src="/broken-image.jpg" />
+          <AccountCircleIcon sx={{ width: 24, height: 24 }} />
         </div>
       </Stack>
-    </header>
+    </Box>
   );
 };
 
