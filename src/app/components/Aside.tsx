@@ -46,7 +46,7 @@ const Aside = () => {
         }}
       >
         <ListComponent>
-          <AddIcon />
+          <AddIcon sx={{ color: "gray" }} />
           <p>Auftrag erstellen</p>
         </ListComponent>
         <Divider />
@@ -54,7 +54,7 @@ const Aside = () => {
           <List>
             <ListItem>
               <ListItemIcon>
-                <AccessTimeIcon />
+                <AccessTimeIcon sx={{ color: "gray" }} />
               </ListItemIcon>
               <p>Letzte auftrage</p>
             </ListItem>
@@ -73,7 +73,7 @@ const Aside = () => {
           </List>
           <Divider />
           <ListComponent>
-            <SearchIcon />
+            <SearchIcon sx={{ color: "gray" }} />
             <p>Auftrag Suchen</p>
           </ListComponent>
         </div>
