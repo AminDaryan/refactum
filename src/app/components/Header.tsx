@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Stack } from '@mui/material';
+import { Box, IconButton, Stack } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 
@@ -10,7 +10,7 @@ const Header = () => {
       sx={{
         bgcolor: "primary.main",
         color: "white",
-        boxShadow: "2"
+        boxShadow: "3"
       }}
     >
       <Stack
@@ -30,12 +30,14 @@ const Header = () => {
             gap: "0.5rem"
           }}
         >
-          <MenuIcon />
+          <IconButton >
+            <MenuIcon sx={{ color: "white" }} />
+          </IconButton>
           <Box component="h3" sx={{ fontWeight: "normal" }}>REFACTUM Fertigungsassiastent</Box>
         </Stack>
-        <div>
-          <AccountCircleIcon sx={{ width: 24, height: 24 }} />
-        </div>
+        <IconButton >
+          <AccountCircleIcon sx={{ color: "white", width: 24, height: 24 }} />
+        </IconButton>
       </Stack>
     </Box>
   );

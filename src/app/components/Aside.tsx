@@ -2,7 +2,7 @@ import React, { FC, ReactNode } from 'react';
 import SearchIcon from '@mui/icons-material/Search';
 import AccessTimeIcon from '@mui/icons-material/AccessTime';
 import AddIcon from '@mui/icons-material/Add';
-import { Stack, Divider, Box, List, ListItem, ListItemText, ListItemIcon } from '@mui/material';
+import { Stack, Divider, Box, List, ListItem, ListItemText, ListItemIcon, ListItemButton } from '@mui/material';
 
 interface ListComponentI {
   children: ReactNode;
@@ -10,17 +10,22 @@ interface ListComponentI {
 
 const ListComponent: FC<ListComponentI> = ({ children }) => {
   return (
-    <Stack
-      direction="row"
-      useFlexGap
+    <ListItemButton
       sx={{
-        alignItems: "center",
         padding: "1rem",
-        gap: "2rem"
       }}
     >
-      {children}
-    </Stack>
+      <Stack
+        direction="row"
+        useFlexGap
+        sx={{
+          alignItems: "center",
+          gap: "2rem"
+        }}
+      >
+        {children}
+      </Stack>
+    </ListItemButton>
   );
 };
 
@@ -30,6 +35,7 @@ const Aside = () => {
       component="aside"
       sx={{
         width: "20rem",
+        zIndex: "10"
       }}
     >
       <Stack
