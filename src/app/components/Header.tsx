@@ -9,7 +9,8 @@ const Header = () => {
       component="header"
       sx={{
         bgcolor: "primary.main",
-        color: "white"
+        color: "white",
+        boxShadow: "2"
       }}
     >
       <Stack
@@ -22,15 +23,15 @@ const Header = () => {
         }}
       >
         <Stack
-          spacing={{ xs: 1, sm: 2 }}
           direction="row"
           useFlexGap
           sx={{
             alignItems: "center",
+            gap: "0.5rem"
           }}
         >
           <MenuIcon />
-          <h1>REFACTUM Fertigungsassiastent</h1>
+          <Box component="h3" sx={{ fontWeight: "normal" }}>REFACTUM Fertigungsassiastent</Box>
         </Stack>
         <div>
           <AccountCircleIcon sx={{ width: 24, height: 24 }} />

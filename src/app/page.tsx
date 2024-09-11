@@ -1,4 +1,4 @@
-import { Stack } from "@mui/material";
+import { Divider, Stack } from "@mui/material";
 import Aside from "./components/Aside";
 import Main from "./components/Main";
 
@@ -13,6 +13,7 @@ export default function Home () {
       }}
     >
       <Aside />
+      <Divider orientation="vertical" />
       <Main />
     </Stack>
   );
